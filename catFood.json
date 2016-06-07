@@ -36,37 +36,24 @@
         }
       ],
     "breeds": "Siamese, Bengal, Showshoe, Munchkin"},
-    {
-      "name": "MeowMeal ",
+     {
+      "name": "Meow Meal",
       "types": [
-        {
-          "type": "Kitten",
-          "volumes": [
-            {
-              "name": "24oz",
-              "price": 19.99
-            },
-            {
-              "name": "48oz",
-              "price": 34.99
-            }
-          ]
-        },
-        {
-          "type": "Adult",
-          "volumes": [
-            {
-              "name": "28oz",
-              "price": 22.99
-            },
-            {
-              "name": "56oz",
-              "price": 40.99
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "breeds": "Manx, Egyptian Mau, Himalayan, Rag Doll"
+      
+          { "type": "Kitten",
+            "volumes": [
+              { "name": "24oz",
+                "price": 19.99},
+              { "name": "48oz",
+                "price": 34.99}
+                ]},
+          { "type": "Adult",
+            "volumes": [
+              { "name": "28oz",
+                "price": 22.99},
+              { "name": "56oz",
+                "price": 40.99}
+                ]}],
+      "breeds": "Manx, Egyptian Mau, Himalayan, Rag Doll"}
+  ]
 }
