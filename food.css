@@ -1,0 +1,10 @@
+.cat_brand, .dog_brand{
+	display: block;
+	border: 1px solid black;
+	max-width: 30%;
+}
+
+.header {
+	font-size:30px;
+	font-weight: bold;
+}

@@ -8,24 +8,24 @@ function executeThisCodeAfterFileIsLoadedCat () { //cat function
 
   // console.log("data.cat_brands", data.cat_brands);
   for (var i = 0; i < data.cat_brands.length; i++) {  // loop thru cat_brands array
-    console.log("data.cat_brands[i]", data.cat_brands[i]);
+    // console.log("data.cat_brands[i]", data.cat_brands[i]);
     currentFood = data.cat_brands[i];  
-    catFoodData += "<div class='cat_brand'>";  //start DIV ///////////////////////
+    catFoodData += `<div class='cat_brand'>`;  //start DIV ///////////////////////
     catFoodData += `<h2>${currentFood.name}</h2>`;  
-    catFoodData += `<p> ${currentFood.breeds} </p>`;
+    catFoodData += `<p> ${currentFood.breeds} </p>`;  //ADD BREEDS BC THEY ARE THE SAME NODE AS BRANDS////////////////////////////
 
     for (var j = 0; j < currentFood.types.length; j++){  // loop thru TYPES array
-      console.log("currentFood.types[j]", currentFood.types[j]);
+      // console.log("currentFood.types[j]", currentFood.types[j]);
       currentType = currentFood.types[j]; 
       catFoodData += "<div class='type'> Type: " + currentType.type + "</div>"; //add food TYPE 
 
       for (var k = 0; k < currentType.volumes.length; k++){  // loop thru VOLUMES array (name, price)
-        console.log("currentType.volumes[k]", currentType.volumes[k]);
+        // console.log("currentType.volumes[k]", currentType.volumes[k]);
         currentVolume = currentType.volumes[k]; 
         catFoodData += "<div class='price'>Price: " + currentVolume.name + " for " + currentVolume.price + "</div>"; // add NAME and PRICE (32oz for 9.99)
       }
     } 
-    catFoodData += "</div>";  //End DIV /////////////////////////////
+    catFoodData += `</div>`;  //CLOSE DIV /////////////////////////////
 
   };
 
@@ -35,9 +35,6 @@ function executeThisCodeAfterFileIsLoadedCat () { //cat function
 
 
 var catRequest = new XMLHttpRequest(); 
-
 catRequest.addEventListener("load", executeThisCodeAfterFileIsLoadedCat); 
-
 catRequest.open("GET", "catfood.JSON"); 
-
 catRequest.send(); 
